@@ -1,4 +1,4 @@
-I have Used "Jupyter Notebook" to start with basic understanding.
+I have used "Jupyter Notebook" to start with basic understanding.
 
 I'll try to use mostly free LLM Models available with Ollama
 which will be running locally.
