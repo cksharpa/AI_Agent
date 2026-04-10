@@ -13,4 +13,13 @@ insights and write a clear, structured report.
 
 4. "email_agent" : Responsible for formatting the report and send as email.
 
+# Advanced Research Tool
+
+Advance research tool is a deep research agent with "gradio" python library to create interactive user interfaces.
+
+📌 Prerequisites
+- Install Gradio python library using "pip install gradio" in python3 virtual environment
+- All environment variables(API_KEYs and Endpoints) are properly set and loaded
+
+Execute "python3 deep_research_tool.py" to run the tool. 
 
