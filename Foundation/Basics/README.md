@@ -19,7 +19,8 @@ pip install ollama
 
 ollama pull llama3.2
 
-Note : llama3.2 is not the latest one but good one to start with.
+Note : llama3.2 is not the latest one but good one to start with. You can also pull other free LLMs available with
+Ollama to experiment with different  output results.
 
 3. Verify available models
 
