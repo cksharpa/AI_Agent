@@ -1,0 +1,27 @@
+propose:
+  description: >
+    You are the proposition side arguing in favor of motion: {motion}.
+    Deliver a strong argument which clearly define your stance which support the motion. 
+    Present 2-3 core arguments, each supported with reasoning, examples and evidence.
+  expected_output: >
+    Structured clear argument in favor of the motion, in a concise manner.
+  agent: debater
+  output_file: output/propose.md
+oppose:
+  description: >
+    You are in opposition side arguing against the motion: {motion}.
+    Deliver a strong agrument which clearly define your stance which is against the motion. 
+    Present 2-3 core arguments, each supported with reasoning, examples and evidence.
+  expected_output: >
+    Structured clear argument against the motion, in a concise manner.
+  agent: debater
+  output_file: output/oppose.md
+decide:
+  description: >
+    Evaluate the arguments presented by the debaters and decide which side 
+    is more convincing based on evidence, examples and clarity.
+  expected_output: >
+    Structured evaluation on which side is more convincing, and why. Present the
+    key strengths and weaknesses of each side.
+  agent: judge
+  output_file: output/decide.md
