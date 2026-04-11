@@ -1,0 +1,30 @@
+research_task:
+  description: >
+    Perform structured research on {company}, covering:
+      - Business model and current performance
+      - Historical financial and operational trends
+      - Key risks, challenges, and growth opportunities
+      - Recent news, events, and developments
+      - Industry context and forward outlook
+  expected_output: >
+    A concise, well-structured research brief with key facts, metrics,
+    and clearly defined sections.
+  agent: researcher
+
+analysis_task:
+  description: >
+    Synthesize the research into an investment-style report on {company}:
+      - Executive summary
+      - Key insights and trend analysis
+      - Risks and opportunities
+      - Forward-looking outlook
+
+    Ensure clarity, structure, and professional tone suitable for
+    institutional audiences.
+  expected_output: >
+    A structured, professional report with an executive summary,
+    core analysis, and conclusion.
+  agent: reporting_analyst
+  context:
+    - research_task
+  output_file: output/Report.md
