@@ -1,0 +1,8 @@
+coding_task:
+  description: >
+    Design, implement, and validate Python code for the assignment: {assignment}.
+    Ensure correctness, efficiency, and readability.
+  expected_output: >
+    A single file containing the complete Python code and its corresponding output.
+  agent: coding_assistant
+  output_file: output/code_and_output.txt
