@@ -1,0 +1,32 @@
+news_analysis:
+  description: >
+    Identify 2–3 trending companies in {sector} based on recent news.
+    Ensure selections are current and avoid repeating previously identified companies.
+  expected_output: >
+    A concise list of trending companies in {sector} with brief context.
+  agent: news_analyst
+  output_file: output/trending_companies.json
+
+research_analysis:
+  description: >
+    Analyze the shortlisted companies and provide structured insights including
+    business overview, key financials, growth drivers, risks, and market position.
+  expected_output: >
+    A structured research report covering each company with key insights.
+  agent: research_analyst
+  context:
+    - news_analysis
+  output_file: output/research_report.json
+
+selection_decision:
+  description: >
+    Evaluate the research findings and select the most compelling investment opportunity.
+    Provide a clear rationale, and briefly explain why other companies were not selected.
+  expected_output: >
+    Final decision including:
+      - Selected company with justification
+      - Summary of other companies and reasons for rejection
+  agent: stock_selector
+  context:
+    - research_analysis
+  output_file: output/decision.md
