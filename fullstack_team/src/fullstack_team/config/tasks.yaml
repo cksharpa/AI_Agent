@@ -1,0 +1,75 @@
+define_requirements:
+  description: >
+    Analyze user input and create a detailed Product Requirement Document
+    including user stories and acceptance criteria.
+    Here are the input: {requirements}
+  expected_output: >
+    Structured product requirements in YAML format.
+  agent: product_manager
+  output_file: output/requirements.yaml
+
+design_architecture:
+  description: >
+    Create system architecture, API specifications, and database schema based on product requirements.
+    Here are the input: {requirements}
+  expected_output: >
+    Architecture design including HLD, LLD, APIs, and DB schema.
+  agent: system_architect
+  context:
+    - define_requirements
+  output_file: output/design.md
+
+develop_backend:
+  description: >
+    Implement backend APIs, business logic, and database models.
+    Here are the input: {requirements}
+  expected_output: >
+    Backend code and API implementation.
+  agent: backend_engineer
+  context:
+    - design_architecture
+  output_file: output/{module_name}
+
+develop_frontend:
+  description: >
+    Implement frontend UI and integrate with backend APIs.
+    Here are the input: {requirements}
+  expected_output: >
+    Frontend application code.
+  agent: frontend_engineer
+  context:
+    - design_architecture
+    - develop_backend
+  output_file: output/app.py
+
+test_application:
+  description: >
+    Provide test scripts and perform unit, integration, and end-to-end testing.
+  expected_output: >
+    Test reports with identified bugs and coverage details.
+    A test_{module_name} module that tests the given backend module.
+  agent: test_engineer
+  context:
+    - develop_backend
+    - develop_frontend
+  output_file: output/test_{module_name}
+
+deploy_application:
+  description: >
+    Setup CI/CD pipelines and deploy the application in docker.
+  expected_output: >
+    Deployment scripts, Docker configs, and pipeline setup.
+  agent: devops_engineer
+  context:
+    - test_application
+  output_file: output/docker-compose.yml
+
+final_approval:
+  description: >
+    Review all outputs and ensure alignment with requirements and quality standards.
+    Here are the input: {requirements}
+  expected_output: >
+    Final approval report with go/no-go decision.
+  agent: tech_lead
+  context:
+    - deploy_application
