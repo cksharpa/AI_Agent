@@ -1,7 +1,7 @@
 # FullstackTeam Crew
 
-Important Note : For the sake of demonstration, I have used free LLM Model like "gpt-oss-20b" which
-may not provide a cleaner and best results. Feel free to experminent with different LLMs and modifying the inputs, agent's goal and backstory, task's description etc. 
+**Important Note** : For the sake of demonstration, I have used free LLM Model like "gpt-oss-20b" which
+may not provide a cleaner and best results. Feel free to experiment with different LLMs and modifying the inputs, agent's goal and backstory, task's description etc. 
 
 Welcome to the FullstackTeam Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
