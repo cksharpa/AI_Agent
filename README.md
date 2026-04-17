@@ -7,7 +7,7 @@ Important Notes :
 
 - Python 3.10+ is recommended
 
-- Important "pip install" in python venv :  gradio, exa_py, sendgrid, ipykernel, pydantic, pushover-complete, openai-agents
+- Important "pip install" in python venv :  gradio, exa_py, sendgrid, ipykernel, pydantic, pushover-complete, openai-agents, crewai, crewai-tools, langgraph, langchain 
 
 - I have tried using mostly free LLM models like "gpt-oss-20b", "deepseek-r1" and models available with Ollama. Also, free tools like Exa search tool, Sendgrid for sending emails, pushover for notifications etc. 
 
